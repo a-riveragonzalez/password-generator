@@ -51,6 +51,12 @@ function generatePassword(){
       masterArray.push(specialChar[i]);
     }
   }
+
+  // todo store randomized items of the master array 
+  // todo store userLength amount of ^above 
+  // todo print out the ^above
+
+
 }
 
 // Get references to the #generate element

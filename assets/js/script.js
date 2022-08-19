@@ -1,6 +1,4 @@
 // Assignment code here
-// assign variables
-// todo variable for , , , special char
 var passwordLength; //this is undefined at the moment. (8-128)
 var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -21,6 +19,11 @@ function generatePassword(){
   // error control 
   if (!userLower && !userUpper && !userNumbers && !userSpecial){
     alert("You need to select at least one type of character to create a password");
+    return generatePassword();
+  }
+
+  if (userLength<8 || userLength>128){
+    alert("Your password must be between 8 - 128 characters");
     return generatePassword();
   }
 

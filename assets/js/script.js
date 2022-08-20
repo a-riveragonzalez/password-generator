@@ -8,6 +8,7 @@ var specialChar = ["!","\u0022","#","$","%","&","'","(",")","*","+",",","-",
   "|", "}","~",];
 
 var masterArray = []; //this is where we will push other arrays
+var password;
 
 function generatePassword(){
   var userLength = prompt("How many characters do you want your password? \n Pick a number between 8 and 128");
@@ -52,10 +53,18 @@ function generatePassword(){
     }
   }
 
-  // todo store randomized items of the master array 
-  // todo store userLength amount of ^above 
-  // todo print out the ^above
+  // created an empty variable to store the new password in
+  var newPassword = "";
 
+  // fill the empty string with masterArray and userLength 
+  for (var i = 0; i < userLength; i++){
+    newPassword = newPassword + masterArray[Math.floor(Math.random()*masterArray.length)];
+  }
+
+  console.log(newPassword);
+
+  password = newPassword;
+  console.log(password);
 
 }
 
@@ -67,7 +76,7 @@ function writePassword() {
   var password = generatePassword(); //function to make password based on confirms
   var passwordText = document.querySelector("#password"); //wher the password will be written
 
-  passwordText.value = password; //this makes password generated into the password text box (still needs to be printed though)
+  passwordText.value = password; //this makes password generated into the password text box
 }
 
 // Add event listener to generate button

@@ -29,25 +29,25 @@ function generatePassword(){
   }
 
   // pushing user choices into the master array
-  if (userLower){
+  if (userLower===true){
     for (var i = 0; i < lowerCase.length; i++){
       masterArray.push(lowerCase[i]);
     }
   }
 
-  if (userUpper){
+  if (userUpper===true){
     for (var i = 0; i < upperCase.length; i++){
       masterArray.push(upperCase[i]);
     }
   }
 
-  if (userNumbers){
+  if (userNumbers===true){
     for(var i = 0; i < numbers.length; i++){
       masterArray.push(numbers[i]);
     }
   }
 
-  if (userSpecial){
+  if (userSpecial===true){
     for(var i = 0; i < specialChar.length; i++){
       masterArray.push(specialChar[i]);
     }

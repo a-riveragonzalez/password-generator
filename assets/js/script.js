@@ -8,7 +8,7 @@ var specialChar = ["!","\u0022","#","$","%","&","'","(",")","*","+",",","-",
   "|", "}","~",];
 
 var masterArray = []; //this is where we will push other arrays
-var password;
+// var password;
 
 function generatePassword(){
   var userLength = prompt("How many characters do you want your password? \n Pick a number between 8 and 128");
@@ -61,12 +61,11 @@ function generatePassword(){
     newPassword = newPassword + masterArray[Math.floor(Math.random()*masterArray.length)];
   }
 
-  console.log(newPassword);
-
-  password = newPassword;
-  console.log(password);
+  return newPassword;
 
 }
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
